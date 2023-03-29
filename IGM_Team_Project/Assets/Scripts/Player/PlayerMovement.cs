@@ -46,7 +46,6 @@ public class PlayerMovement : Character
         if (Input.GetKey(KeyCode.Mouse1))
         {
            // StartCoroutine(Interact()); 
-
         }
         if (Input.GetKey(KeyCode.Mouse0)) 
         {
