@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6894346142839184834}
   - component: {fileID: 6894346142839184833}
   - component: {fileID: 1290646154400581462}
-  - component: {fileID: 6894346142839184832}
   - component: {fileID: 748370133828436763}
+  - component: {fileID: 6894346142839184832}
   m_Layer: 0
   m_Name: KeyItem
   m_TagString: Item
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6894346142839184839}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.35, y: 3.27, z: 11.155977}
-  m_LocalScale: {x: 0.5913227, y: 0.5913227, z: 0.5913227}
+  m_LocalScale: {x: 0.5732048, y: 0.5732048, z: 0.5732048}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,22 +101,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.025382442, y: 0.0076921103}
   m_Size: {x: 0.9728968, y: 0.9728969}
   m_Direction: 0
---- !u!114 &6894346142839184832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6894346142839184839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68123845d528fbe4daf64ad647db0b80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 4660650419819203237, guid: b9fb4db83c85745418ba08422364b942, type: 3}
-  radius: 1
-  itemInfo: You found a key!
-  cluePopUp: {fileID: 0}
 --- !u!50 &748370133828436763
 Rigidbody2D:
   serializedVersion: 4
@@ -138,3 +122,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6894346142839184832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6894346142839184839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68123845d528fbe4daf64ad647db0b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 4660650419819203237, guid: b9fb4db83c85745418ba08422364b942, type: 3}
+  radius: 1
+  itemInfo: You found a key!
+  cluePopUp: {fileID: 0}

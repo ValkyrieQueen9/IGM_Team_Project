@@ -11,18 +11,20 @@ public class ClueInfo : MonoBehaviour
      * Eventually might hold popup controls for doors, bigger clues or dialogue
      */
 
-    public GameObject[] cluePopUps;
     public bool infoIsVisible;
+    public GameObject[] cluePopUps;
+    public TextMeshProUGUI infoTextBox;
+
+    /* 
+    *  Gets the text component on the information PopUp UI
+    *  Sets the text content as the interactables text component
+    *  Sets the popup as visible
+    *  This will be changed when more clues come in with more complex information
+    */
+
 
     public void CluePopUp(GameObject popUp, string info)
     {
-        /* 
-        *  Gets the text component on the information PopUp UI
-        *  Sets the text content as the interactables text component
-        *  Sets the popup as visible
-        *  This will be changed when more clues come in with more complex information
-        */
-
         TextMeshProUGUI infoTextBox = popUp.GetComponentInChildren<TextMeshProUGUI>();
         infoTextBox.text = info;
         popUp.SetActive(true);
