@@ -10,6 +10,8 @@ TagManager:
   - InventorySlot
   - Door
   - Enemy
+  - GameManager
+  - PopUp
   layers:
   - Default
   - TransparentFX
