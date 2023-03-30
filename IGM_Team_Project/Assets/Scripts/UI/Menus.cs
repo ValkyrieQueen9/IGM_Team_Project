@@ -33,7 +33,11 @@ public class Menus : MonoBehaviour
 
     public void WinGame()
     {
+<<<<<<< Updated upstream
         winMenuCanvas.SetActive(true);
+=======
+       winMenuCanvas.SetActive(true);
+>>>>>>> Stashed changes
     }
 
     public void pauseGame()
