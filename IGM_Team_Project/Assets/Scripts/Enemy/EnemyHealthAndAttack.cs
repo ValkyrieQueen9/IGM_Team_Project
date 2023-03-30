@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class EnemyHealthAndAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float BatHitpoints;
+    [SerializeField]
+    private float MaxBatHitpoints = 12 ; 
+    PlayerHealth playerHealth; // we reference the script to get the damage health function
+
+
+    // intitlaize the hitpoints 
+
     void Start()
     {
-        
+        BatHitpoints = MaxBatHitpoints;    
     }
 
-    // Update is called once per frame
-    void Update()
+    // for the future once i get the damage attack function, it gives damage to the bat. 
+    public void TakeHit(float damage)
     {
-        
+        BatHitpoints -= damage; 
+        if (BatHitpoints <= 0 )
+        {
+            Destroy (gameObject); 
+        }
+ 
     }
+ //this is the section to give damage to the player 
+    private void OnCollisionEnter2D (Collision2D collision) {  // we check for a collision 
+        if(collision.gameObject.tag == "Player") { // if the collision is a player then we damage it 
+
+            playerHealth.DamageHealth(10); 
+
+        }
+
+    }
+
+
 }

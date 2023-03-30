@@ -9,6 +9,7 @@ TagManager:
   - Clue
   - InventorySlot
   - Door
+  - Enemy
   layers:
   - Default
   - TransparentFX
