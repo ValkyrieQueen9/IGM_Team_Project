@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 21096824}
   - component: {fileID: 21096826}
   - component: {fileID: 21096825}
+  - component: {fileID: 21096827}
   m_Layer: 0
   m_Name: TestAmeliaPlayer
   m_TagString: Player
@@ -229,7 +230,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.49, y: 0.7142, z: 10}
   m_LocalScale: {x: 0.048924804, y: 0.045534637, z: 2}
-  m_Children: []
+  m_Children:
+  - {fileID: 1080450805}
   m_Father: {fileID: 519420032}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -285,6 +287,33 @@ MonoBehaviour:
   - {fileID: 171900887}
   infoIsVisible: 0
   menu: {fileID: 0}
+  attackArea: {fileID: 1080450805}
+--- !u!61 &21096827
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21096820}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 31.916882}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.2, y: 31.916882}
+  m_EdgeRadius: 0
 --- !u!114 &30517822 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5778219579076417036, guid: 140c905cbb471854daab6b424723121f, type: 3}
@@ -759,6 +788,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &525485224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2742788174190949026, guid: 3fd2a80f562987a4992c3144c1d99c98, type: 3}
+  m_PrefabInstance: {fileID: 2742788174488153908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &525485225
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525485224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00000023841858, y: 0.01677072}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.8828125}
+    newSize: {x: 1, y: 0.8828125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1341653, y: 1.0840604}
+  m_EdgeRadius: 0
 --- !u!114 &645580221 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1894542879968460020, guid: 140c905cbb471854daab6b424723121f, type: 3}
@@ -812,6 +872,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1815914366738586028, guid: bb1a7cf11358bda44ba9106e66ac88db, type: 3}
   m_PrefabInstance: {fileID: 85564441}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1080450804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080450805}
+  m_Layer: 0
+  m_Name: AttackArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080450805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080450804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 21096823}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1153203301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6333551650263559123, guid: 38d5008c289ea3d45ad2949e5334b757, type: 3}
@@ -1162,6 +1252,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Batsy
       objectReference: {fileID: 0}
+    - target: {fileID: 2742788174190949026, guid: 3fd2a80f562987a4992c3144c1d99c98, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742788174190949033, guid: 3fd2a80f562987a4992c3144c1d99c98, type: 3}
+      propertyPath: BatHitpoints
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 2742788174190949039, guid: 3fd2a80f562987a4992c3144c1d99c98, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1206,7 +1304,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2742788174190949032, guid: 3fd2a80f562987a4992c3144c1d99c98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3fd2a80f562987a4992c3144c1d99c98, type: 3}
 --- !u!1001 &3623981798769814235
 PrefabInstance:

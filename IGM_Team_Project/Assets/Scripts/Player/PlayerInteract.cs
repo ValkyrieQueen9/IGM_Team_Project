@@ -15,11 +15,29 @@ public class PlayerInteract : ClueInfo
     Camera cam;
     Inventory playerInventory;
     public Menus menu;
+    [SerializeField]
+    private Transform attackArea; 
+
 
     void Start()
     {
         cam = Camera.main;
         playerInventory = gameObject.GetComponent<Inventory>();
+    }
+// function to determine attacking while we don't have the sprites for it. 
+
+
+    private void PlayerAttack() { 
+        //HWe create a box the size of attack area and keep everything inside a collider array
+        // the overlap box works for transforms 
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(attackArea.position, attackArea.localScale, 0 ); 
+        //then we check for each element and see if we have an enemy there
+
+     //   foreach (Collider2D collider in colliders) {
+      //      if( GameObject. == EnemyHealthAndAttack)
+      //  }
+
+
     }
 
     void Update()

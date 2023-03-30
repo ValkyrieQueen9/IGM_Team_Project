@@ -59,6 +59,7 @@ public class EnemyMovement : MonoBehaviour
         _rigidbody.SetRotation(rotation); 
 
 
+
     }
     private void SetVelocity(){
         if (_targetDirection == Vector2.zero){ 
