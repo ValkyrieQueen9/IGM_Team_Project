@@ -154,8 +154,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80245679}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.49, y: 0.7142, z: 15.339}
-  m_LocalScale: {x: 0.048924804, y: 0.045534637, z: 2}
+  m_LocalPosition: {x: 2.389, y: -0.587, z: 15.339}
+  m_LocalScale: {x: 1.0210698, y: 0.9503163, z: 41.740368}
   m_Children: []
   m_Father: {fileID: 969135241}
   m_RootOrder: 0
@@ -272,7 +272,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ac6bc7d94e294fc4bb73694c345edfe4, type: 3}
+  m_Sprite: {fileID: -968382404791133921, guid: a0e6eaa34e8df3a4b98e74e461c79081, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -300,7 +300,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 31.916882}
+    oldSize: {x: 1, y: 1.8571428}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -23756,7 +23756,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 2124391837}
-  winMenuCanvas: {fileID: 3612296067140556008}
 --- !u!4 &2084994012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2294562837006674681, guid: b82f84aa60c6fa34fae7acab799b2c7e, type: 3}
