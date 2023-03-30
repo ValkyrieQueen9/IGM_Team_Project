@@ -8,13 +8,13 @@ public class Menus : MonoBehaviour
 {
 
     public GameObject pauseMenuCanvas;
-    public GameObject winMenuCanvas;
+   // public GameObject winMenuCanvas;
     public static bool IsGamePaused;
 
     void Start()
     {
         pauseMenuCanvas.SetActive(false);
-        winMenuCanvas.SetActive(false);
+      //  winMenuCanvas.SetActive(false);
         IsGamePaused = false;
     }
 
@@ -33,7 +33,7 @@ public class Menus : MonoBehaviour
 
     public void WinGame()
     {
-        winMenuCanvas.SetActive(true);
+       // winMenuCanvas.SetActive(true);
     }
 
     public void pauseGame()
