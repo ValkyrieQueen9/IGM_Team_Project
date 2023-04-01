@@ -13,7 +13,12 @@ public class ClueInfo : MonoBehaviour
 
     public bool infoIsVisible;
     public GameObject[] cluePopUps;
-    public TextMeshProUGUI infoTextBox;
+    public TextMeshProUGUI[] questionTextBoxes;
+
+    private void Start()
+    {
+        questionTextBoxes = cluePopUps[2].GetComponentsInChildren<TextMeshProUGUI>(); //Finds all the text components under the clue question game object
+    }
 
     /* 
     *  Gets the text component on the information PopUp UI
@@ -28,6 +33,15 @@ public class ClueInfo : MonoBehaviour
         TextMeshProUGUI infoTextBox = popUp.GetComponentInChildren<TextMeshProUGUI>();
         infoTextBox.text = info;
         popUp.SetActive(true);
+        infoIsVisible = true;
+    }
+
+    public void ClueQuestionPopUp(string questionText, string answer1Text, string answer2Text)
+    {
+        questionTextBoxes[0].text = questionText;
+        questionTextBoxes[1].text = answer1Text;
+        questionTextBoxes[2].text = answer2Text;
+        cluePopUps[2].SetActive(true);
         infoIsVisible = true;
     }
 
