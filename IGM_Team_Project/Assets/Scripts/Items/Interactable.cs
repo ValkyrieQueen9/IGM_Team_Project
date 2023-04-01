@@ -6,14 +6,20 @@ using TMPro;
 
 public class Interactable : MonoBehaviour
 {
-    /* Attached to the UI Item Buttons
-    *  When an item button is clicked the code checks the inventory slots to find an available place to put it.
-    *  Currently using buttons as a way to interact with items until interact code is done
+    /* 
+     * Attached to each interactable Game Object
+     * In inspector:
+     * - add the gameobjects name and radius
+     * - add the items info, this is what will pop up when the item is clicked
+     * - toolbarIcon is a UI Image gameObject which is different from a normal gameobject sprite - I have made these as prefabs in Prefabs > Items > ToolbarIcons 
+     * - cluePopUp options can be found under UI > CluePopUps (renamed from ItemInfo)
+     * - The options are small pop up for small items like a key, a big pop up for things like books with more info and ClueQuestions for things like the stone and magic circle.
     */
 
-    public GameObject item;
+    public string interactableName;
     public float radius;
     public string itemInfo;
+    public GameObject toolbarIcon;
     public GameObject cluePopUp;
 
     private Inventory inventory;
@@ -23,7 +29,12 @@ public class Interactable : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
    
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected() 
+        /*
+         *  This adds a circle around the game object so we can see the radius as we're making the scene. 
+         *  When a player enters the circle radius they can interact with the game object.
+         *  If you can't see it, in the scene view click on Gizmos in the top right.
+         */
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, radius);
@@ -35,20 +46,23 @@ public class Interactable : MonoBehaviour
         {
             if (inventory.isFull[i] == false)
             {
-                inventory.inventoryList.Add(item);
-                Debug.Log("Adding Item to Inventory");
+                inventory.inventoryList.Add(interactableName);
+                Debug.Log("Adding "+ interactableName +" to inventory");
                 inventory.isFull[i] = true;
-                Instantiate(item, inventory.slots[i].transform, false);
+                Instantiate(toolbarIcon, inventory.slots[i].transform, false);
                 Destroy(gameObject);
                 break;
             }
-            else
+            /*
+            else if (inventory.isFull[i])
             {
-                //somethings not working here
-                Debug.Log("Inventory Full");
+                Debug.Log("Inventory slot is full");
+                break;
             }
+            */
 
         }
+
     }
 
     public void OpenDoor()

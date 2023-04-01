@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7047611051579131868}
   - component: {fileID: 9055948119365783722}
-  - component: {fileID: 1680834191348130779}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46,17 +45,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 0}
   winMenuCanvas: {fileID: 0}
---- !u!114 &1680834191348130779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8059707251762233864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd235028cf78544495623d70cc10b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cluePopUps: []
-  infoIsVisible: 0

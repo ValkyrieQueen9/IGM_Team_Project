@@ -134,7 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68123845d528fbe4daf64ad647db0b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 4660650419819203237, guid: b9fb4db83c85745418ba08422364b942, type: 3}
-  radius: 1
+  interactableName: Key
+  radius: 2.73
   itemInfo: You found a key!
+  toolbarIcon: {fileID: 4660650419819203237, guid: b9fb4db83c85745418ba08422364b942, type: 3}
   cluePopUp: {fileID: 0}
