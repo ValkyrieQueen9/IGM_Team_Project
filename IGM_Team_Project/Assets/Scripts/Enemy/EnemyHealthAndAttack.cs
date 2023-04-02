@@ -28,14 +28,6 @@ public class EnemyHealthAndAttack : MonoBehaviour
  
     }
  //this is the section to give damage to the player 
-    private void OnCollisionEnter2D (Collision2D collision) {  // we check for a collision 
-        if(collision.gameObject.tag == "Player") { // if the collision is a player then we damage it 
-
-            playerHealth.DamageHealth(10); 
-
-        }
-
-    }
 
 
 }

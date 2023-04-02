@@ -44,6 +44,8 @@ public class ClueManager : MonoBehaviour
        * I'm not sure this will make much sense but I have the idea in my head and will probably forget it in the morning so I thought it best to write it down!
        */
 
+   [SerializeField]
+   GameObject batsy; 
     public string currentClue;
     public bool infoIsVisible;
     public bool questionIsVisible;
@@ -63,7 +65,7 @@ public class ClueManager : MonoBehaviour
     string stoneHint = "A small trinket in the shape of a stone, it has a slot in the middle. Is there something that fits there?";
     string stoneAnswer1 = "Yes";
     string stoneAnswer2 = "No";
-    string stoneClueResult = "They promised me that ill be able to escape, instead here they are trapped alongside me, I just hope my fiance can defeat them or at least escape. The creature doesn’t see but can feel around it";
+    string stoneClueResult = "They promised me that ill be able to escape, instead here they are trapped alongside me, I just hope my fiance can defeat them or at least escape. The creature doesnï¿½t see but can feel around it";
 
     //MagicBook question and answers
     //if magic book found without ink in inventory what happens? Should it say something like the book looks suspicious? The pages have faded writing or something?
@@ -214,6 +216,8 @@ public class ClueManager : MonoBehaviour
     public void AllCluesCompleted()
     {
         Debug.Log("Batsy incoming!");
+        Instantiate(batsy); 
+        
         //Trigger batsy here?
         //instantiate(batsy prefab) maybe??
         //if using this, batsy might appear many many times. We can use a bool to check if batsy has been triggered yet and use it to make this code only run once.

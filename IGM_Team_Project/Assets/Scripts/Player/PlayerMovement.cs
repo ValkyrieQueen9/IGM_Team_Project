@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 // I used monobehaviour but in my original version it was dependand on the character class to make top down changes
 public class PlayerMovement : Character
 {
+     string currentScene;
+   
+
    // protected Vector2 direction;
     // Start is called before the first frame update
    protected override void Start()
     {
         base.Start();
+         currentScene = SceneManager.GetActiveScene().name;
+
         
     }
 
@@ -51,6 +57,17 @@ public class PlayerMovement : Character
         {
             // StartCoroutine(attack())
         }
+    }
+
+        private void OnCollisionEnter2D (Collision2D collision) {  // we check for a collision 
+        if(collision.gameObject.tag == "Enemy") { // if the collision is a player then we damage it 
+
+           // Destroy(gameObject); 
+            SceneManager.LoadScene(currentScene);  // it had the same effect restart than destroy
+            
+
+        }
+
     }
 
  
