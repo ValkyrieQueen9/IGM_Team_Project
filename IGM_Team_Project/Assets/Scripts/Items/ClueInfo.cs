@@ -12,12 +12,13 @@ public class ClueInfo : MonoBehaviour
      */
 
     public bool infoIsVisible;
-    public GameObject[] cluePopUps;
+    public GameObject[] cluePopUps = new GameObject[3]; 
     public TextMeshProUGUI[] questionTextBoxes;
 
     private void Start()
     {
-        questionTextBoxes = cluePopUps[2].GetComponentsInChildren<TextMeshProUGUI>(); //Finds all the text components under the clue question game object
+        questionTextBoxes = cluePopUps[3].GetComponentsInChildren<TextMeshProUGUI>(); //Finds all the text components under the clue question game object
+        
     }
 
     /* 

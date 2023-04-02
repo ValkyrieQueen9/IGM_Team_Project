@@ -50,7 +50,7 @@ public class ClueManager : MonoBehaviour
     public bool infoIsVisible;
     public bool questionIsVisible;
     public int completedClues;
-    public GameObject[] cluePopUps; // [0] is the small popup, [1] is the big popup, [2] is the question popup
+   public GameObject[] cluePopUps = new GameObject[3];  // [0] is the small popup, [1] is the big popup, [2] is the question popup
     public TextMeshProUGUI[] questionTextBoxes; // [0] is the main question text, [1] is answer 1/the left button, [2] is answer 2/the right button
 
     bool answer1Selected;
@@ -88,8 +88,9 @@ public class ClueManager : MonoBehaviour
     private void Start()
     {
         playerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-        questionTextBoxes = cluePopUps[2].GetComponentsInChildren<TextMeshProUGUI>(); //Finds all the text components under the clue question game object
+        questionTextBoxes = cluePopUps[3].GetComponentsInChildren<TextMeshProUGUI>(); //Finds all the text components under the clue question game object
         completedClues = 0;
+        
     }
 
     private void Update()
