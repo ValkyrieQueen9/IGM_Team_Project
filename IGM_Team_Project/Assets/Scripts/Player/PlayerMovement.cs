@@ -8,6 +8,7 @@ public class PlayerMovement : Character
      string currentScene;
     private Animator animator;
 
+
    // protected Vector2 direction;
     // Start is called before the first frame update
    protected override void Start()
@@ -26,8 +27,17 @@ public class PlayerMovement : Character
         //getting the character directions to show the proper animations
         if (direction != Vector2.zero)
         {
+           
+            
             animator.SetFloat("Xinput", direction.x);
             animator.SetFloat("Yinput", direction.y);
+
+            animator.SetBool("IsWalking", true); //says if character is moving for animator
+           
+        }
+        else
+        {
+            animator.SetBool("IsWalking", false); // says if character is Not moving for animator
         }
         base.Update();
          
