@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : Character
 {
      string currentScene;
-   
+    private Animator animator;
 
    // protected Vector2 direction;
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class PlayerMovement : Character
     {
         base.Start();
          currentScene = SceneManager.GetActiveScene().name;
-
+        animator = GetComponent<Animator>();
         
     }
 
@@ -23,7 +23,13 @@ public class PlayerMovement : Character
     {
         //Executes the GetInput function
          GetInput();
-         base.Update();
+        //getting the character directions to show the proper animations
+        if (direction != Vector2.zero)
+        {
+            animator.SetFloat("Xinput", direction.x);
+            animator.SetFloat("Yinput", direction.y);
+        }
+        base.Update();
          
         
     }
@@ -57,6 +63,9 @@ public class PlayerMovement : Character
         {
             // StartCoroutine(attack())
         }
+
+
+        
     }
 
         private void OnCollisionEnter2D (Collision2D collision) {  // we check for a collision 

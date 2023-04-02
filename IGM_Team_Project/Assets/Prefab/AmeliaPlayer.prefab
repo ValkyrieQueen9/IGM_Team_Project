@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2414829007859021482}
   - component: {fileID: 2414829007859021480}
   - component: {fileID: 2414829007859021483}
+  - component: {fileID: 6089358363976395502}
   m_Layer: 0
   m_Name: AmeliaPlayer
   m_TagString: Player
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: -968382404791133921, guid: a0e6eaa34e8df3a4b98e74e461c79081, type: 3}
+  m_Sprite: {fileID: -9073068268805560877, guid: 3b02808806bc91045877f9c89af2e1c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,7 +107,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9625, y: 1.7875}
+    oldSize: {x: 0.77, y: 1.43}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9d41de566931b4d923daddef193763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueInfo: {fileID: 0}
+  clueManager: {fileID: 0}
   attackArea: {fileID: 2414829008947069223}
 --- !u!114 &2414829007859021483
 MonoBehaviour:
@@ -204,6 +205,26 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!95 &6089358363976395502
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414829007859021478}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2414829008947069222
 GameObject:
   m_ObjectHideFlags: 0

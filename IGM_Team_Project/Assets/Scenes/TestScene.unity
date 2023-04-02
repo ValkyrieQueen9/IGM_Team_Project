@@ -1222,6 +1222,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1690fe74c711d40ba3ed993576e530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1645533101
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645533099}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9bad3f31ffa224f4983e36fe2cd13d20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!4 &1684044998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6894346142839184834, guid: bb44da8b47d218c469860faec23d3fa2, type: 3}
@@ -1664,6 +1684,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 519420032}
     m_Modifications:
+    - target: {fileID: 2414829007859021476, guid: e41c83da887029c41905ece7aa6261cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -9073068268805560877, guid: 3b02808806bc91045877f9c89af2e1c7, type: 3}
     - target: {fileID: 2414829007859021477, guid: e41c83da887029c41905ece7aa6261cb, type: 3}
       propertyPath: m_RootOrder
       value: 0
