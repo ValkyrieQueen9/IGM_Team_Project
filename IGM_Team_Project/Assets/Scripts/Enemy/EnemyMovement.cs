@@ -1,29 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMovement : MonoBehaviour
 {
-        [SerializeField]
+    [SerializeField]
     private float _speed; 
     [SerializeField]
     private float _rotationSpeed;
     private Rigidbody2D _rigidbody; 
     private PlayerAwarness _playerAwarenessController; 
     private Vector2 _targetDirection; 
-    private Transform _player; 
+    private Transform _player;
+    string currentScene;
 
-
-    // Start is called before the first frame update
    // Start is called before the first frame update
     private void Awake()
     {
+        currentScene = SceneManager.GetActiveScene().name;
         _rigidbody =GetComponent<Rigidbody2D>() ; 
         _playerAwarenessController = GetComponent<PlayerAwarness>(); 
  
     }
 
-    // Update is called once per frame
    // Update is called once per frame
     private void FixedUpdate()
     {
@@ -33,9 +33,10 @@ public class EnemyMovement : MonoBehaviour
         
     }
 
-    private void UpdateTargetDirection() { 
+    private void UpdateTargetDirection()
+    {
 
-        if(_playerAwarenessController.AwareOfPlayer)
+        if (_playerAwarenessController.AwareOfPlayer)
         {
             _targetDirection = _playerAwarenessController.DirectionToPlayer;
         }
@@ -44,9 +45,7 @@ public class EnemyMovement : MonoBehaviour
             _targetDirection = Vector2.zero;
 
         }
-
-
-        }
+    }
 
     private void RotateTowardsTarget(){
 
@@ -58,8 +57,6 @@ public class EnemyMovement : MonoBehaviour
         Quaternion rotation = Quaternion.RotateTowards(transform.rotation, TargetRotation, _rotationSpeed*Time.deltaTime);  
         _rigidbody.SetRotation(rotation); 
 
-
-
     }
     private void SetVelocity(){
         if (_targetDirection == Vector2.zero){ 
@@ -70,9 +67,7 @@ public class EnemyMovement : MonoBehaviour
             _rigidbody.velocity =  transform.up *_speed; 
 
         }
-
-
-
     }
+
 
 }

@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: fa162b07e176f9944962f29514efa3c1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4233531110862398378
+    second: brass_theme_1a_0
+  - first:
+      213: -5407580562396496627
+    second: brass_theme_1a_1
+  - first:
+      213: 2934406136867170959
+    second: brass_theme_1a_2
+  - first:
+      213: -8596889355136479431
+    second: brass_theme_1a_3
+  - first:
+      213: 9051232881698997435
+    second: brass_theme_1a_4
+  - first:
+      213: 4525249984859252917
+    second: brass_theme_1a_5
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -41,7 +59,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -114,7 +132,408 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: brass_theme_1a_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 597
+        width: 600
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -300, y: 300}
+        - {x: -300, y: -300}
+        - {x: 300, y: -300}
+        - {x: 300, y: 300}
+      - - {x: -251, y: 251}
+        - {x: 249, y: 251}
+        - {x: 249, y: -249}
+        - {x: -251, y: -249}
+      - - {x: -243, y: -193}
+        - {x: -245, y: -198}
+        - {x: -245, y: -246}
+        - {x: -98, y: -246}
+        - {x: -94, y: -241}
+        - {x: -94, y: -193}
+      - - {x: -73, y: -193}
+        - {x: -85, y: -209}
+        - {x: -85, y: -246}
+        - {x: 66, y: -246}
+        - {x: 66, y: -203}
+        - {x: 56, y: -193}
+      - - {x: 87, y: -193}
+        - {x: 75, y: -209}
+        - {x: 75, y: -246}
+        - {x: 226, y: -246}
+        - {x: 226, y: -203}
+        - {x: 216, y: -193}
+      - - {x: 32, y: -108}
+        - {x: 11, y: -113}
+        - {x: 11, y: -164}
+        - {x: 12, y: -166}
+        - {x: 50, y: -184}
+        - {x: 223, y: -184}
+        - {x: 234, y: -176}
+        - {x: 234, y: -108}
+      - - {x: -245, y: -131}
+        - {x: -245, y: -183}
+        - {x: -49, y: -183}
+        - {x: -49, y: -131}
+      - - {x: -247, y: -73}
+        - {x: -247, y: -92}
+        - {x: -246, y: -93}
+        - {x: 0, y: -93}
+        - {x: 5, y: -89}
+        - {x: 5, y: -77}
+        - {x: 4, y: -73}
+      - - {x: 207, y: -58}
+        - {x: 205, y: -62}
+        - {x: 205, y: -66}
+        - {x: 215, y: -91}
+        - {x: 227, y: -91}
+        - {x: 234, y: -69}
+        - {x: 234, y: -58}
+      - - {x: 172, y: -68}
+        - {x: 153, y: -60}
+        - {x: 141, y: -60}
+        - {x: 141, y: -88}
+        - {x: 154, y: -88}
+        - {x: 174, y: -80}
+        - {x: 175, y: -78}
+        - {x: 175, y: -69}
+      - - {x: -239, y: 246}
+        - {x: -245, y: 245}
+        - {x: -245, y: -68}
+        - {x: -244, y: -70}
+        - {x: 71, y: -70}
+        - {x: 71, y: 246}
+      - - {x: -224, y: 225}
+        - {x: 50, y: 225}
+        - {x: 50, y: -49}
+        - {x: -224, y: -49}
+      - - {x: 109, y: -10}
+        - {x: 107, y: -12}
+        - {x: 107, y: -46}
+        - {x: 165, y: -46}
+        - {x: 165, y: -15}
+        - {x: 162, y: -10}
+      - - {x: 188, y: -10}
+        - {x: 184, y: -17}
+        - {x: 184, y: -40}
+        - {x: 185, y: -46}
+        - {x: 241, y: -46}
+        - {x: 242, y: -44}
+        - {x: 242, y: -12}
+        - {x: 240, y: -10}
+      - - {x: -105, y: 22}
+        - {x: -126, y: 3}
+        - {x: -126, y: -16}
+        - {x: -109, y: -38}
+        - {x: 29, y: -38}
+        - {x: 49, y: -18}
+        - {x: 49, y: -2}
+        - {x: 33, y: 22}
+      - - {x: -217, y: 7}
+        - {x: -219, y: 6}
+        - {x: -219, y: -33}
+        - {x: -218, y: -35}
+        - {x: -181, y: -35}
+        - {x: -179, y: -33}
+        - {x: -179, y: 5}
+        - {x: -181, y: 7}
+      - - {x: -171, y: -33}
+        - {x: -170, y: -35}
+        - {x: -131, y: -35}
+        - {x: -131, y: 7}
+        - {x: -169, y: 7}
+        - {x: -171, y: 6}
+      - - {x: 73, y: 247}
+        - {x: 73, y: -4}
+        - {x: 75, y: -5}
+        - {x: 90, y: -5}
+        - {x: 93, y: -1}
+        - {x: 93, y: 243}
+        - {x: 89, y: 247}
+      - - {x: 109, y: 38}
+        - {x: 107, y: 36}
+        - {x: 107, y: 4}
+        - {x: 109, y: 2}
+        - {x: 161, y: 2}
+        - {x: 165, y: 9}
+        - {x: 165, y: 33}
+        - {x: 162, y: 38}
+      - - {x: 188, y: 38}
+        - {x: 184, y: 31}
+        - {x: 184, y: 8}
+        - {x: 185, y: 2}
+        - {x: 241, y: 2}
+        - {x: 242, y: 4}
+        - {x: 242, y: 36}
+        - {x: 240, y: 38}
+      - - {x: -217, y: 55}
+        - {x: -219, y: 54}
+        - {x: -219, y: 15}
+        - {x: -218, y: 13}
+        - {x: -181, y: 13}
+        - {x: -179, y: 15}
+        - {x: -179, y: 53}
+        - {x: -181, y: 55}
+      - - {x: -171, y: 15}
+        - {x: -170, y: 13}
+        - {x: -131, y: 13}
+        - {x: -131, y: 55}
+        - {x: -169, y: 55}
+        - {x: -171, y: 54}
+      - - {x: -105, y: 86}
+        - {x: -126, y: 67}
+        - {x: -126, y: 48}
+        - {x: -109, y: 26}
+        - {x: 29, y: 26}
+        - {x: 49, y: 46}
+        - {x: 49, y: 62}
+        - {x: 33, y: 86}
+      - - {x: 109, y: 54}
+        - {x: 107, y: 52}
+        - {x: 107, y: 48}
+        - {x: 109, y: 46}
+        - {x: 189, y: 46}
+        - {x: 191, y: 48}
+        - {x: 191, y: 52}
+        - {x: 189, y: 54}
+      - - {x: 99, y: 134}
+        - {x: 97, y: 132}
+        - {x: 97, y: 52}
+        - {x: 99, y: 50}
+        - {x: 103, y: 50}
+        - {x: 105, y: 52}
+        - {x: 105, y: 132}
+        - {x: 103, y: 134}
+      - - {x: 196, y: 246}
+        - {x: 194, y: 244}
+        - {x: 194, y: 52}
+        - {x: 196, y: 50}
+        - {x: 237, y: 50}
+        - {x: 239, y: 52}
+        - {x: 239, y: 244}
+        - {x: 237, y: 246}
+      - - {x: -191, y: 102}
+        - {x: -209, y: 102}
+        - {x: -219, y: 94}
+        - {x: -219, y: 62}
+        - {x: -206, y: 58}
+        - {x: -182, y: 58}
+        - {x: -177, y: 61}
+        - {x: -177, y: 92}
+        - {x: -186, y: 101}
+      - - {x: -169, y: 102}
+        - {x: -171, y: 99}
+        - {x: -171, y: 71}
+        - {x: -166, y: 58}
+        - {x: -134, y: 58}
+        - {x: -129, y: 65}
+        - {x: -129, y: 98}
+        - {x: -135, y: 102}
+      - - {x: 107, y: 102}
+        - {x: 107, y: 64}
+        - {x: 110, y: 62}
+        - {x: 143, y: 62}
+        - {x: 143, y: 100}
+        - {x: 140, y: 102}
+      - - {x: 167, y: 102}
+        - {x: 152, y: 97}
+        - {x: 152, y: 67}
+        - {x: 155, y: 66}
+        - {x: 186, y: 66}
+        - {x: 191, y: 71}
+        - {x: 191, y: 97}
+        - {x: 181, y: 102}
+      - - {x: -105, y: 150}
+        - {x: -126, y: 131}
+        - {x: -126, y: 112}
+        - {x: -109, y: 90}
+        - {x: 29, y: 90}
+        - {x: 49, y: 110}
+        - {x: 49, y: 126}
+        - {x: 33, y: 150}
+      - - {x: -219, y: 150}
+        - {x: -219, y: 109}
+        - {x: -216, y: 106}
+        - {x: -183, y: 106}
+        - {x: -176, y: 113}
+        - {x: -176, y: 147}
+        - {x: -178, y: 150}
+      - - {x: -171, y: 150}
+        - {x: -171, y: 109}
+        - {x: -168, y: 106}
+        - {x: -135, y: 106}
+        - {x: -128, y: 113}
+        - {x: -128, y: 147}
+        - {x: -130, y: 150}
+      - - {x: 139, y: 169}
+        - {x: 112, y: 169}
+        - {x: 107, y: 165}
+        - {x: 107, y: 113}
+        - {x: 109, y: 111}
+        - {x: 141, y: 111}
+        - {x: 143, y: 113}
+        - {x: 143, y: 168}
+      - - {x: 187, y: 169}
+        - {x: 160, y: 169}
+        - {x: 155, y: 165}
+        - {x: 155, y: 113}
+        - {x: 157, y: 111}
+        - {x: 189, y: 111}
+        - {x: 191, y: 113}
+        - {x: 191, y: 168}
+      - - {x: -151, y: 174}
+        - {x: -151, y: 196}
+        - {x: -154, y: 213}
+        - {x: -162, y: 214}
+        - {x: -203, y: 214}
+        - {x: -213, y: 201}
+        - {x: -213, y: 166}
+        - {x: -197, y: 152}
+        - {x: -172, y: 152}
+        - {x: -169, y: 153}
+        - {x: -158, y: 160}
+        - {x: -152, y: 171}
+      - - {x: -102, y: 214}
+        - {x: -111, y: 208}
+        - {x: -126, y: 194}
+        - {x: -126, y: 178}
+        - {x: -109, y: 154}
+        - {x: 29, y: 154}
+        - {x: 49, y: 174}
+        - {x: 49, y: 190}
+        - {x: 33, y: 214}
+      - - {x: 107, y: 246}
+        - {x: 107, y: 188}
+        - {x: 139, y: 188}
+        - {x: 143, y: 190}
+        - {x: 143, y: 246}
+      - - {x: 155, y: 246}
+        - {x: 155, y: 188}
+        - {x: 187, y: 188}
+        - {x: 191, y: 190}
+        - {x: 191, y: 246}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3a4887d1680ca30800000000000000
+      internalID: 4233531110862398378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brass_theme_1a_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 38
+        width: 601
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0dbc0c012a64f4b0800000000000000
+      internalID: -5407580562396496627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brass_theme_1a_2
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 41
+        width: 39
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8aa1b695da19b820800000000000000
+      internalID: 2934406136867170959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brass_theme_1a_3
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 41
+        width: 38
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93fc0c50ea6b1b880800000000000000
+      internalID: -8596889355136479431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brass_theme_1a_4
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 492
+        width: 169
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb40105b9507c9d70800000000000000
+      internalID: 9051232881698997435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brass_theme_1a_5
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 243
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8a06ba2eaecce30800000000000000
+      internalID: 4525249984859252917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

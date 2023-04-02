@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9160863218302109791}
   m_Layer: 0
   m_Name: Magic book
-  m_TagString: Item
+  m_TagString: Clue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9160863218302109784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -786.24, y: -441.89, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7464419, y: 0.67203116, z: 0.30370173}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: -7805572020948263271, guid: 6eda071fa18d7f24c9de29b841042538, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012620032, y: -0.00898546}
+  m_Offset: {x: -0.0071650147, y: -0.008985519}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7180747, y: 2.381895}
+  m_Size: {x: 2.0780911, y: 2.381895}
   m_EdgeRadius: 0
 --- !u!50 &5864778068443016227
 Rigidbody2D:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: MagicBook
-  radius: 3.38
+  radius: 1.29
   itemInfo: 'A book with torn pages and markings on the spine, it seems to be missing
     something  , it has a marking on the middle of the blade '
   toolbarIcon: {fileID: 0}

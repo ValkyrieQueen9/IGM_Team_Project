@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8723497760431174132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.53, y: -2.69, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0836899, y: 1.0836899, z: 1.0836899}
   m_Children: []
   m_Father: {fileID: 0}
@@ -134,7 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68123845d528fbe4daf64ad647db0b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 4660650419819203237, guid: b9fb4db83c85745418ba08422364b942, type: 3}
+  interactableName: 
   radius: 2.08
   itemInfo: You need a key!
+  toolbarIcon: {fileID: 0}
   cluePopUp: {fileID: 0}

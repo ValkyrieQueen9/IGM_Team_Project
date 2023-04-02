@@ -12,11 +12,14 @@ TagManager:
   - Enemy
   - GameManager
   - PopUp
+  - BatsySpawn
+  - PlayerCollider
+  - Room
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - NoTilemaps
   - Water
   - UI
   - 

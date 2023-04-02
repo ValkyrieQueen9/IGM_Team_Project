@@ -44,8 +44,7 @@ public class ClueManager : MonoBehaviour
        * I'm not sure this will make much sense but I have the idea in my head and will probably forget it in the morning so I thought it best to write it down!
        */
 
-   [SerializeField]
-   GameObject batsy; 
+
     public string currentClue;
     public bool infoIsVisible;
     public bool questionIsVisible;
@@ -53,9 +52,17 @@ public class ClueManager : MonoBehaviour
     public GameObject[] cluePopUps; // [0] is the small popup, [1] is the big popup, [2] is the question popup
     public TextMeshProUGUI[] questionTextBoxes; // [0] is the main question text, [1] is answer 1/the left button, [2] is answer 2/the right button
 
+    List<string> completedCluesList = new List<string>();
     bool answer1Selected;
     bool answer2Selected;
+
+   [SerializeField]
+    GameObject batsy;
+    public int batsySpawnRoom;
+    bool hasBatsyAppeared;
+    public GameObject[] batsySpawnPos;
     Inventory playerInventory;
+    PlayerMovement playerMovement;
 
     #region All ClueQuestionText
     //Number 1 is always the yes answer, 2 is always the no answer
@@ -69,18 +76,18 @@ public class ClueManager : MonoBehaviour
 
     //MagicBook question and answers
     //if magic book found without ink in inventory what happens? Should it say something like the book looks suspicious? The pages have faded writing or something?
-    string magicBookQuestion;
-    string magicBookHint;
-    string magicBookAnswer1;
-    string magicBookAnswer2;
-    string magicBookClueResult;
+    string magicBookQuestion = "What to do?";
+    string magicBookHint = "Hint";
+    string magicBookAnswer1 = "Yes";
+    string magicBookAnswer2 = "No";
+    string magicBookClueResult = "Something Happens";
 
     //Clock question and answers
-    string clockQuestion;
-    string clockAnswer1;
-    string clockAnswer2;
-    string clockClueResult;
-    string clockClueWrong;
+    string clockQuestion = "What to do?";
+    string clockAnswer1 = "Yes";
+    string clockAnswer2 = "No";
+    string clockClueResult = "Something Happens";
+    string clockClueWrong = "Nothing Happens";
 
     #endregion
 
@@ -88,8 +95,11 @@ public class ClueManager : MonoBehaviour
     private void Start()
     {
         playerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         questionTextBoxes = cluePopUps[2].GetComponentsInChildren<TextMeshProUGUI>(); //Finds all the text components under the clue question game object
+        batsySpawnPos = GameObject.FindGameObjectsWithTag("BatsySpawn");
         completedClues = 0;
+        hasBatsyAppeared = false;
     }
 
     private void Update()
@@ -98,17 +108,17 @@ public class ClueManager : MonoBehaviour
         {
             if(currentClue == "Stone")
             {
-                ClueCompleted(stoneClueResult);
+                ClueCompleted(currentClue, stoneClueResult);
             }
 
             if (currentClue == "MagicBook")
             {
-                ClueCompleted(magicBookClueResult);
+                ClueCompleted(currentClue, magicBookClueResult);
             }
 
             if (currentClue == "Clock")
             {
-                ClueCompleted(clockClueResult);
+                ClueCompleted(currentClue, clockClueResult);
             }
         }
 
@@ -117,11 +127,16 @@ public class ClueManager : MonoBehaviour
             if(currentClue == "Clock")
             {
                 ClosePopUp();
+                currentClue = "Clock";
                 CluePopUp(cluePopUps[0], clockClueWrong);
+                answer1Selected = false;
+                answer2Selected = false;
             }
             else
             {
                 ClosePopUp();
+                answer1Selected = false;
+                answer2Selected = false;
             }
         }
 
@@ -149,8 +164,8 @@ public class ClueManager : MonoBehaviour
         questionTextBoxes[0].text = questionText;
         questionTextBoxes[1].text = answer1Text;
         questionTextBoxes[2].text = answer2Text;
-        cluePopUps[2].SetActive(true);
         questionIsVisible = true;
+        cluePopUps[2].SetActive(true);
     }
 
     public void ClosePopUp()
@@ -159,68 +174,92 @@ public class ClueManager : MonoBehaviour
         {
             c.SetActive(false);
         }
+
         currentClue = null;
         infoIsVisible = false;
         questionIsVisible = false;
-        answer1Selected = false;
-        answer2Selected = false;
     }
 
     public void ClueFound(string clueName) //Triggered in the playerInteract script when a clue is clicked
     {
-        if (clueName == "Stone") //Checks which clue it is
+        if (!completedCluesList.Contains(clueName))
         {
-            currentClue = clueName; //sets the current clue
+            if (clueName == "Stone") //Checks which clue it is
+            {
+                currentClue = clueName; //sets the current clue
 
-            if (playerInventory.inventoryList.Contains("Sword")) //check if player has sword
-            {
-                ClueQuestionPopUp(stoneQuestion, stoneAnswer1, stoneAnswer2); //Asks if the player wants to use the sword or not
+                if (playerInventory.inventoryList.Contains("Sword")) //check if player has sword
+                {
+                    ClueQuestionPopUp(stoneQuestion, stoneAnswer1, stoneAnswer2); //Asks if the player wants to use the sword or not
+                }
+                else
+                {
+                    CluePopUp(cluePopUps[0], stoneHint); //Tells the player a hint
+                }
             }
-            else
+
+            if (clueName == "MagicBook")
             {
-                CluePopUp(cluePopUps[0], stoneHint); //Tells the player a hint
+                currentClue = clueName;
+
+                if (playerInventory.inventoryList.Contains("Ink"))
+                {
+                    ClueQuestionPopUp(magicBookQuestion, magicBookAnswer1, magicBookAnswer2);
+                }
+                else
+                {
+                    CluePopUp(cluePopUps[0], magicBookHint);
+                }
+            }
+
+            if (clueName == "Clock")
+            {
+                currentClue = clueName;
+                ClueQuestionPopUp(clockQuestion, clockAnswer1, clockAnswer2);
             }
         }
-
-        if (clueName == "MagicBook")
+        else
         {
-            currentClue = clueName;
-
-            if (playerInventory.inventoryList.Contains("Ink"))
-            {
-                ClueQuestionPopUp(magicBookQuestion, magicBookAnswer1, magicBookAnswer2);
-            }
-            else
-            {
-                CluePopUp(cluePopUps[0], magicBookHint);
-            }
+            Debug.Log("You've done that clue");
         }
-
-        if (clueName == "Clock")
-        {
-            currentClue = clueName;
-            ClueQuestionPopUp(clockQuestion, clockAnswer1, clockAnswer2);
-        }
-
     }
 
-    public void ClueCompleted(string clueResult)
+    public void ClueCompleted(string clueName, string clueResult)
     {
+        completedCluesList.Add(clueName);
         ClosePopUp();
         CluePopUp(cluePopUps[1], clueResult);
         answer1Selected = false;
         answer2Selected = false;
         completedClues += 1;
+
     }
 
     public void AllCluesCompleted()
     {
-        Debug.Log("Batsy incoming!");
-        Instantiate(batsy); 
-        
-        //Trigger batsy here?
-        //instantiate(batsy prefab) maybe??
-        //if using this, batsy might appear many many times. We can use a bool to check if batsy has been triggered yet and use it to make this code only run once.
+        if(hasBatsyAppeared == false)
+        {
+            if(playerMovement.playerLocation == "Hallway")
+            {
+                batsySpawnRoom = 1; //spawning in living room
+            }
+            else if (playerMovement.playerLocation == "Bedroom")
+            {
+                batsySpawnRoom = 2; //spawning in study
+            }
+            else if (playerMovement.playerLocation == "LivingRoom")
+            {
+                batsySpawnRoom = 0; //spawning in bedroom
+            }
+            else if (playerMovement.playerLocation == "Study")
+            {
+                batsySpawnRoom = 1; //spawning in living room
+            }
+
+            Debug.Log("Batsy incoming!");
+            Instantiate(batsy, batsySpawnPos[batsySpawnRoom].transform);
+            hasBatsyAppeared = true;
+        }
     }
 
     public void answer1Button()

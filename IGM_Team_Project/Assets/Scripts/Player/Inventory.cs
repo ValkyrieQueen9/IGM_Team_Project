@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         slots = GameObject.FindGameObjectsWithTag("InventorySlot");
-        inventoryList.Add("AmeliaSword");
+        //inventoryList.Add("AmeliaSword");
     }
 
 }

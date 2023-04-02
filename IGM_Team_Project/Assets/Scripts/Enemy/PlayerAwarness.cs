@@ -23,6 +23,12 @@ public class PlayerAwarness : MonoBehaviour
 
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, _playerAwarenessDistance);
+    }
+
 
     // Update is called once per frame
     void Update()

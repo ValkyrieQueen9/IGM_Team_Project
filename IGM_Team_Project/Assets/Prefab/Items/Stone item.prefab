@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9109233650516283759}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -785.26, y: -436.63, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -1282916835864925654, guid: 3a445fc829ad5e0468e08397d6d68571, type: 3}
+  m_SortingOrder: 6
+  m_Sprite: {fileID: -2064297988098780288, guid: fafecc78fd98bdf4f8066eda49644253, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Stone
-  radius: 3.38
+  radius: 1.32
   itemInfo: 'A small trinket in the shape of a stone, it has a slot in the middle. '
-  toolbarIcon: {fileID: 0}
+  toolbarIcon: {fileID: 6914753778369269191, guid: 1335f7b55307fec47a909c2949c3eaf5, type: 3}
   cluePopUp: {fileID: 0}
