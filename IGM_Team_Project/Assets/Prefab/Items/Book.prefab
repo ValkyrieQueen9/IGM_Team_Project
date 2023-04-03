@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -319862700543992521, guid: 6eda071fa18d7f24c9de29b841042538, type: 3}
+  m_Sprite: {fileID: -3530798324757361716, guid: 6eda071fa18d7f24c9de29b841042538, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -146,6 +146,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableName: Book
   radius: 3.38
-  itemInfo: You found a book
+  itemInfo: "A dark book with tattered notes on the margins, it reads: \u2018The
+    ritual was performed at twelve.  I expected a flash of light or an ominous voice.
+    All I got was a black oily substance that dripped from the walls, it covered
+    the clock and broke the hands.\u201D  "
   toolbarIcon: {fileID: 8538968368188444279, guid: 2466145739cab514a894ce744221a4f2, type: 3}
   cluePopUp: {fileID: 0}

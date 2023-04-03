@@ -15,6 +15,7 @@ TagManager:
   - BatsySpawn
   - PlayerCollider
   - Room
+  - Menu
   layers:
   - Default
   - TransparentFX

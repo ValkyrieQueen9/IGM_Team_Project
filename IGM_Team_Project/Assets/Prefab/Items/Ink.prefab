@@ -146,7 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableName: Ink
   radius: 3.38
-  itemInfo: 'Ink used to reveal stains or hide information on books.  s a marking
-    on the middle of the blade '
+  itemInfo: "You reach for a glass bottle filled with a shiny, inky liquid. The label
+    is scratched out and hard to decipher. Maybe it\u2019s ink, perhaps it can be
+    used in a book? "
   toolbarIcon: {fileID: 0}
   cluePopUp: {fileID: 0}

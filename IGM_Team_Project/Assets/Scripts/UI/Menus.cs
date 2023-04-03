@@ -4,55 +4,57 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Menus : MonoBehaviour
+public class Menus: MonoBehaviour
 {
-
-    public GameObject pauseMenuCanvas;
-   public GameObject winMenuCanvas;
-    public static bool IsGamePaused;
+    public bool IsGamePaused;
+    public GameObject[] menuGameObjs;
+    string currentScene;
 
     void Start()
     {
-        pauseMenuCanvas.SetActive(false);
-      winMenuCanvas.SetActive(false);
+        currentScene = SceneManager.GetActiveScene().name;
+
+        if(currentScene == "Mansion")
+        {
+            foreach (GameObject m in menuGameObjs)
+            {
+                m.SetActive(false);
+            }
+
+        }
         IsGamePaused = false;
     }
 
     void Update()
     {
-        if (IsGamePaused == false && Input.GetButtonDown("Cancel"))
+        if (currentScene == "Mansion")
         {
-            pauseGame();
-        }
+            if (IsGamePaused == false && Input.GetButtonDown("Cancel"))
+            {
+                pauseGame();
+            }
 
-        else if (IsGamePaused && Input.GetButtonDown("Cancel"))
-        {
-            unPauseGame();
+            else if (IsGamePaused && Input.GetButtonDown("Cancel"))
+            {
+                unPauseGame();
+            }
         }
     }
 
     public void WinGame()
     {
-       winMenuCanvas.SetActive(true);
+        menuGameObjs[0].SetActive(true);//sets win menu active
     }
 
     public void pauseGame()
     {
-        pauseMenuCanvas.SetActive(true);
+        menuGameObjs[1].SetActive(true); //sets pause menu active
         IsGamePaused = true;
-        Debug.Log("Game is paused");
-        //Stop playermovement
-        //Stop enemy movements
-        //Stop timers if any
     }
     public void unPauseGame()
     {
-        pauseMenuCanvas.SetActive(false);
+        menuGameObjs[1].SetActive(false);
         IsGamePaused = false;
-        Debug.Log("Game is not paused");
-        //start playermovement again
-        //start enemy movements
-        //start timers
     }
 
     public void exitGame()
@@ -61,11 +63,23 @@ public class Menus : MonoBehaviour
         Debug.Log("Exit Game");
     }
 
-    public void restartRoom()
+    public void restartGame()
     {
-        string currentScene = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentScene);
+        SceneManager.LoadScene("MainMenu");
     }
 
+    public void playGame()
+    {
+        SceneManager.LoadScene("Mansion");
+    }
+
+    public void showCredits()
+    {
+        menuGameObjs[2].SetActive(true);
+    }
+    public void closeCredits()
+    {
+        menuGameObjs[2].SetActive(false);
+    }
 
 }

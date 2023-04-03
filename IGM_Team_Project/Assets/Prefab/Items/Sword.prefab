@@ -146,7 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableName: Sword
   radius: 1.69
-  itemInfo: 'A letter opener in the shape of a sword, it has a marking on the middle
-    of the blade '
+  itemInfo: A letter opener in the shape of a sword, it has markings down the middle
+    of the blade that almost pulse with a dull glow. It looks small enough to fit
+    somewhere.
   toolbarIcon: {fileID: 3665533960375700168, guid: b132ed0687c2a8e499f4927b3b5376d1, type: 3}
   cluePopUp: {fileID: 0}

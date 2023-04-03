@@ -11,25 +11,33 @@ public class EnemyMovement : MonoBehaviour
     private float _rotationSpeed;
     private Rigidbody2D _rigidbody; 
     private PlayerAwarness _playerAwarenessController; 
-    private Vector2 _targetDirection; 
-    private Transform _player;
-    string currentScene;
+    private Vector2 _targetDirection;
+    private Menus menuManager;
 
-   // Start is called before the first frame update
+
+
+    // Start is called before the first frame update
     private void Awake()
     {
-        currentScene = SceneManager.GetActiveScene().name;
         _rigidbody =GetComponent<Rigidbody2D>() ; 
-        _playerAwarenessController = GetComponent<PlayerAwarness>(); 
- 
+        _playerAwarenessController = GetComponent<PlayerAwarness>();
+        menuManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Menus>();
+
     }
 
-   // Update is called once per frame
+    // Update is called once per frame
     private void FixedUpdate()
     {
-        UpdateTargetDirection();
-       RotateTowardsTarget();
-        SetVelocity();
+        if (!menuManager.IsGamePaused)
+        {
+            UpdateTargetDirection();
+            RotateTowardsTarget();
+            SetVelocity();
+        }
+        else
+        {
+            _rigidbody.velocity = Vector2.zero;
+        }
         
     }
 

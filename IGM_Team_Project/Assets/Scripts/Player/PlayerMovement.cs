@@ -7,43 +7,60 @@ public class PlayerMovement : Character
 {
     public string playerLocation;
     string currentScene;
+    bool playerDied = false;
     private Animator animator;
-
+    private Menus menuManager;
+    public ClueManager clueManager;
+    public GameObject smallClue;
 
    // protected Vector2 direction;
-    // Start is called before the first frame update
    protected override void Start()
     {
         base.Start();
         currentScene = SceneManager.GetActiveScene().name;
         animator = GetComponent<Animator>();
-
+        menuManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Menus>();
     }
 
-    // Update is called once per frame
     protected override void Update()
     {
-        //Executes the GetInput function
-         GetInput();
-        //getting the character directions to show the proper animations
-        if (direction != Vector2.zero)
-        {
-           
-            animator.SetFloat("Xinput", direction.x);
-            animator.SetFloat("Yinput", direction.y);
 
-            animator.SetBool("IsWalking", true); //says if character is moving for animator
+        if (!menuManager.IsGamePaused)
+        {
+            //Executes the GetInput function
+            GetInput();
+            //getting the character directions to show the proper animations
+            if (direction != Vector2.zero)
+            {
+           
+                animator.SetFloat("Xinput", direction.x);
+                animator.SetFloat("Yinput", direction.y);
+
+                animator.SetBool("IsWalking", true); //says if character is moving for animator
      
+            }
+            else
+            {
+                animator.SetBool("IsWalking", false); // says if character is Not moving for animator
+            }
         }
         else
         {
+            direction = Vector2.zero;
             animator.SetBool("IsWalking", false); // says if character is Not moving for animator
         }
 
+        if (playerDied)
+        {
+            if (!clueManager.infoIsVisible)
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+        }
         base.Update();
     }
 
-        private void GetInput()
+    private void GetInput()
     {
         direction = Vector2.zero;
 
@@ -69,8 +86,9 @@ public class PlayerMovement : Character
     {
         if (collision.gameObject.tag == ("Enemy"))
         {
-            Debug.Log("playerhit");
-            SceneManager.LoadScene(currentScene);
+            clueManager.CluePopUp(smallClue, "You Died! The creature caught up to you!");
+            menuManager.IsGamePaused = true;
+            playerDied = true;
         }
 
         if(collision.gameObject.tag == "Room")
@@ -78,7 +96,10 @@ public class PlayerMovement : Character
             playerLocation = collision.gameObject.name;
         }
 
-
+        if(ClueManager.completedClues >= 3 && collision.gameObject.tag == "Door")
+        {
+            SceneManager.LoadScene("WinMenu");
+        }
 
 
 

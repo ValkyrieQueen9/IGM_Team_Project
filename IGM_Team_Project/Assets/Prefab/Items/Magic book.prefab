@@ -146,7 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableName: MagicBook
   radius: 1.29
-  itemInfo: 'A book with torn pages and markings on the spine, it seems to be missing
-    something  , it has a marking on the middle of the blade '
+  itemInfo: "You find an old book with torn pages and curious markings on the spine.
+    The pages of the book are empty but seem to shine strangely in the light as if
+    they\u2019re hiding something within."
   toolbarIcon: {fileID: 0}
   cluePopUp: {fileID: 0}
