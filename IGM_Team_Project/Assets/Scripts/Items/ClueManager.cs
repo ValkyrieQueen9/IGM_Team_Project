@@ -72,7 +72,7 @@ public class ClueManager : MonoBehaviour
     string stoneHint = "On a small podium sits a carved, stone-like object. It has a slot in the middle, is there something that could fit in there?";
     string stoneAnswer1 = "Use the letter opener";
     string stoneAnswer2 = "Do nothing";
-    string stoneClueResult = "You insert the letter opener in the slot in the stone and a note slips out from under the podium: ‘They promised me that I’d be able to escape, instead here they are, trapped alongside me.I just hope my fiance can defeat them, or at least escape.’";
+    string stoneClueResult = "You insert the letter opener in the slot in the stone and a note slips out from under the podium: ‘They promised me that I’d be able to escape, instead here they are, trapped alongside me. I just hope my fiance can defeat them, or at least escape.’";
 
     //MagicBook question and answers
     string magicBookQuestion = "You find an old book with torn pages and curious markings on the spine. The pages of the book are empty but the glass bottle of ink you found glows in its presence.";
