@@ -535,15 +535,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fb29fb3d7f3a146b49bf32f0026e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batsy: {fileID: 2742788174190949026, guid: 3fd2a80f562987a4992c3144c1d99c98, type: 3}
-  batsySpawnRoom: 0
-  hasBatsyAppeared: 0
   currentClue: 
   infoIsVisible: 0
   questionIsVisible: 0
-  completedClues: 0
   cluePopUps: []
-  questionTextBoxes: []
+  batsy: {fileID: 2742788174190949026, guid: 3fd2a80f562987a4992c3144c1d99c98, type: 3}
+  batsySpawnPos: []
 --- !u!1001 &2695082844912994141
 PrefabInstance:
   m_ObjectHideFlags: 0
