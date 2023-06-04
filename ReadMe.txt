@@ -1,5 +1,5 @@
 
-Name: Little mansion of puzzles. 
+Name: The Mystery Of Ambrose Manor
 
 Objective: Escape the mansion
 
@@ -13,5 +13,5 @@ D = right
 Left click = interact/ pick up/ attack. 
 
 You have been trapped in the mansion of your fiance. You must escape but beware of the bat that inhabits the mansion
-The bat will kill you if it catches you 
+The bat will kill you if it catches you!
 
